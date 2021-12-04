@@ -11,9 +11,9 @@
             <div>{{ $company }}</div>
         </div>
 
-        <x-bs::button.primary class="d-lg-none" x-on:click="show = !show">
+        <button.primary class="d-lg-none" x-on:click="show = !show">
             <em class="fa fa-bars"></em>
-        </x-bs::button.primary>
+        </button.primary>
     </div>
 
     <div :class="{ 'show': show }" class="sidebar sticky-lg-top w-lg-17r" data-bs-backdrop="false" style="--top: 3.5rem">

@@ -1,5 +1,5 @@
 @storybook([
-    'name' => 'Primary',
+    'name' => 'Secondary',
     'status' => 'stable',
     'args' => [
         'label' => 'Button',
@@ -52,12 +52,12 @@
         ]
     ]
 ])
-<x-button.primary
+<x-button.secondary
     enable="{{($status ?? '') === 'enabled' }}"
     size="{{$size ?? ''}}"
     icon="{{$icon ?? ''}}"
     iconPosition="{{$iconPosition ?? ''}}"
 >
     {{ $label }}
-</x-button.primary>
+</x-button.secondary>
 

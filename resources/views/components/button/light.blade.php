@@ -1,7 +1,14 @@
 @props([
+    'label' => null,
     'outline' => false,
+    'icon' => null,
+    'iconPosition' => null,
+    'href' => false,
+    'size' => null,
+    'enable' => true,
+    'type' => "light",
 ])
-
-<x-bs::button {{ $attributes->class($outline ? 'btn-outline-light' : 'btn-light') }}>
-    {{{ $slot }}}
-</x-bs::button>
+<x-button.default {{ $attributes }} href="{{$href}}" outline="{{$outline}}" type="{{$type}}" icon="{{$icon}}"
+                  iconPosition="{{$iconPosition}}" label="{{$label}}" size="{{$size}}" enable="{{$enable}}">
+    {{ $slot }}
+</x-button.default>

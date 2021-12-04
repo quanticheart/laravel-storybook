@@ -1,17 +1,17 @@
 @storybook([
-    'name' => 'Chevron Expand',
+    'name' => 'X Circle',
     'status' => 'stable',
     'argTypes' => [
         'size' => [
             'options' => [
                 '16', '32', '64'
             ],
-            'defaultValue' => '16',
+            'defaultValue' => '64',
             'control' => [
                 'type' => 'radio'
             ]
         ]
     ]
 ])
-<x-icon.chevron-expand width="{{ $size ?? '16' }}" height="{{ $size ?? '16'}}"/>
+<x-icon.x-circle width="{{ $size ?? '64' }}" height="{{ $size ?? '64' }}"/>
 

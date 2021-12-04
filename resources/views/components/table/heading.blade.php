@@ -18,15 +18,15 @@
 
             @if($direction === 'asc')
                 <span class="text-secondary">
-                    <x-bs::icons.chevron-up/>
+                    <icons.chevron-up/>
                 </span>
             @elseif($direction === 'desc')
                 <span class="text-secondary">
-                    <x-bs::icons.chevron-down/>
+                    <icons.chevron-down/>
                 </span>
             @else
                 <span class="opacity-0 group-hover-opacity-100 text-secondary">
-                    <x-bs::icons.chevron-up/>
+                    <icons.chevron-up/>
                 </span>
             @endif
 

@@ -1,63 +1,17 @@
 @storybook([
-    'name' => 'Danger',
+    'name' => 'Menu',
     'status' => 'stable',
-    'args' => [
-        'label' => 'Button',
-    ],
     'argTypes' => [
         'size' => [
             'options' => [
-                'sm', 'lg', 'null'
+                '16', '32', '64'
             ],
-            'defaultValue' => 'null',
+            'defaultValue' => '64',
             'control' => [
                 'type' => 'radio'
             ]
-        ],
-        'iconPosition' => [
-            'options' => [
-                'before', 'after', 'null'
-            ],
-            'defaultValue' => 'null',
-            'control' => [
-                'type' => 'radio'
-            ]
-        ],
-        'status' => [
-            'options' => [
-                'enabled', 'disabled'
-            ],
-            'defaultValue' => 'enabled',
-            'control' => [
-                'type' => 'radio'
-            ]
-        ],
-        'icon' => [
-            'options' => [
-                'bone', 'candy-cane', 'carrot'
-            ],
-            'control' => [
-                'type' => 'select'
-            ],
-            'description' => 'Buttom with primary CSS style',
-            'defaultValue' => 'bone',
-            'table' => [
-                'type' => [
-                    'summary' => 'string'
-                ],
-                'defaultValue' => [
-                    'summary' => "null"
-                ],
-            ],
         ]
     ]
 ])
-<x-button.danger
-    enable="{{($status ?? '') === 'enabled' }}"
-    size="{{$size ?? ''}}"
-    icon="{{$icon ?? ''}}"
-    iconPosition="{{$iconPosition ?? ''}}"
->
-    {{ $label }}
-</x-button.danger>
+<x-icon.menu width="{{ $size ?? '64' }}" height="{{ $size ?? '64' }}"/>
 

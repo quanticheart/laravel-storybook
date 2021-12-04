@@ -6,12 +6,12 @@
             'options' => [
                 '16', '32', '64'
             ],
-            'defaultValue' => '16',
+            'defaultValue' => '64',
             'control' => [
                 'type' => 'radio'
             ]
         ]
     ]
 ])
-<x-icon.exclamantion-circle width="{{ $size ?? '16' }}" height="{{ $size ?? '16'}}"/>
+<x-icon.exclamation-circle width="{{ $size ?? '64' }}" height="{{ $size ?? '64' }}"/>
 

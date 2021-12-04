@@ -1,7 +1,20 @@
-@props(['active' => FALSE])
+@props([
+    'active' => false,
+    'href' => null,
+    'label' => null,
+])
+<li {{
+    $attributes->class('breadcrumb-item')
+               ->merge(['class' => $active ? 'active' : ''])
+}}
+    {!!
+    $active ? 'aria-current="page"' : ""
+!!}
+>
+    @if(isset($href) && !empty($href))
+        <a href="{{$href}}">{{$label}}</a>
+    @else
+        {{$label}}
+    @endif
+</li>
 
-@if($active)
-    <li {{ $attributes->class('breadcrumb-item active') }} aria-current="page">{{ $slot }}</li>
-@else
-    <li {{ $attributes->class('breadcrumb-item') }}>{{ $slot }}</li>
-@endif
